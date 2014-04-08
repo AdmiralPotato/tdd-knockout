@@ -1,10 +1,12 @@
 extends layout
 
 block content
-	h1= title
-	p Welcome to Knockout Lessons.
-	ul
-		for item, index in lessonList
-			li
-				a(href="/lesson/" + index)
-					=item.name
+	.row
+		.col-xs-12
+			h1= title
+			p Welcome to Knockout Lessons.
+			ul
+				for item, index in lessonList
+					li
+						a(href="/lesson/" + index)
+							=item.name

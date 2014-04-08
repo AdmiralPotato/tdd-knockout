@@ -8,6 +8,7 @@ exports.list = function(req, res){
 	res.render(
 		'index',
 		{
+			title: 'Knockout Lessons',
 			lessonList: knockoutLessons
 		}
 	);

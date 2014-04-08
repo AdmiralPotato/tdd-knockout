@@ -1,0 +1,30 @@
+extends layout
+
+block content
+	h1 Goat Shippers!
+	p Welcome to the Goat Shippers livestock mailing shop! Do you have a Goat that you need to ship to another city, state, or even country? Our options are sure to meet your every Goat Shipping need!
+	table
+		thead
+			tr
+				th Goat Name
+				th Shipping Method
+				th Price
+				th
+		tbody(data-bind="foreach: itemList")
+			tr
+				td
+					input(data-bind="value: name")
+				td
+					select(data-bind="options: shippingMethodList, value: shippingMethod, optionsText: 'name'")
+				td(data-bind="text: methodPrice")
+				td
+					button(data-bind="click: $root.removeItem, enable: $root.itemList().length > 1") Remove
+	button(data-bind="click: addItem") Add Goat
+	h2
+		= "You are shipping "
+		span(data-bind="text: itemList().length")
+		= " Goats, for a total of $"
+		span(data-bind="text: shippingTotal")
+		| !
+	script(src="/bower_components/knockoutjs/build/output/knockout-latest.debug.js")
+	script(src="/javascripts/lesson_0.js")

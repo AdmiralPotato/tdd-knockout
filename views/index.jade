@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to Knockout Lessons.
+	ul
+		for item, index in lessonList
+			li
+				a(href="/lesson/" + index)
+					=item.name

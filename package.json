@@ -1,0 +1,15 @@
+{
+	"name": "application-name",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"preinstall": "bower install && cd bower_components/knockoutjs && npm install && grunt",
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "3.5.1",
+		"jade": "*",
+		"bower": "*",
+		"grunt": "*"
+	}
+}

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.row
+		.col-xs-12
+			p.return
+				a(href="/") Return
+			h1 Goat Management App
+			p Welcome to the world's best Goat Management App!
+	.row
+		.col-xs-12
+
+block scripts
+	script(src="/bower_components/knockoutjs/build/output/knockout-latest.debug.js")
+	script(src="/bower_components/jquery/dist/jquery.js")
+	script(src="/bower_components/sammy/lib/sammy.js")
+	script(src="/javascripts/lesson_1.js")

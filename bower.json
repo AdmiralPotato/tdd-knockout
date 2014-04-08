@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery": "*",
     "knockoutjs": "*",
-    "bootstrap": "*"
+    "bootstrap": "*",
+    "sammy": "*"
   }
 }

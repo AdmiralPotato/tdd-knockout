@@ -1,6 +1,9 @@
 var knockoutLessons = [
 	{
 		name: 'Editable Item List test'
+	},
+	{
+		name: 'Single Page Application With Ajax/CRUD'
 	}
 ];
 

@@ -26,5 +26,7 @@ block content
 		= " Goats, for a total of $"
 		span(data-bind="text: shippingTotal")
 		| !
+		span.error(data-bind="visible: !bulkRequirementsMet()")
+			| You must add Goats to meet the "Bulk Goat" shipping requirements!
 	script(src="/bower_components/knockoutjs/build/output/knockout-latest.debug.js")
 	script(src="/javascripts/lesson_0.js")

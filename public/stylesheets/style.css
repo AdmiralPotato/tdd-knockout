@@ -51,6 +51,11 @@ p.return{
 	padding: 48px 15px 0 0;
 }
 
+#nav li{
+	float: left;
+	padding-right: 15px;
+}
+
 .editable-table-holder{
 	border: 1px solid #ccc;
 	background-color: #f8f8f8;

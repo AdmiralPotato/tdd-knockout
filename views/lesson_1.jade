@@ -8,7 +8,12 @@ block content
 			h1 Goat Management App
 			p Welcome to the world's best Goat Management App!
 	.row
-		.col-xs-12
+		.col-xs-8.col-md-10
+			ul#nav.list-unstyled(data-bind="foreach: categoryList")
+				li: button.btn.btn-default(data-bind="text: $data, click: $root.activateCategory, css: {active: $data === $root.activeCategory()}")
+
+		.col-xs-4.col-md-2
+			button.btn.btn-default Toggle Menu
 
 block scripts
 	script(src="/bower_components/knockoutjs/build/output/knockout-latest.debug.js")

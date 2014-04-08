@@ -4,6 +4,7 @@
 
 var express = require('express');
 var lessons = require('./routes/lessons');
+var lesson1 = require('./routes/lesson_1');
 var http = require('http');
 var path = require('path');
 
@@ -31,7 +32,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', lessons.list);
-app.get(/\/lesson\/(\d*)/g, lessons.display);
+app.get(/\/lesson\/(\d+)$/, lessons.display);
+
+lesson1.init(app);
 
 //TODO: Add Moniker to reply random names at '/getName/'
 

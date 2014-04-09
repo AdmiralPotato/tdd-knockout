@@ -23,9 +23,13 @@ ItemCategoryManagementApp.prototype = {
 		t.sendList(res, list);
 	},
 	removeItemFromList: function(res, list, item){
-		var t = this;
-		if(item && list.indexOf(item) !== -1){
-			list.remove(item);
+		var t = this,
+			index;
+		if(item){
+			index = list.indexOf(item);
+			if(index !== -1){
+				list.splice(index, 1);
+			}
 		}
 		t.sendList(res, list);
 	},
